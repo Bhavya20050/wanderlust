@@ -1,0 +1,125 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* conatiner bnhi new page ki stylinjg ka part hai */
+.container{
+    flex:1; 
+}
+
+.navbar{
+    height: 5rem;
+    /* navbar hi height bdahiu hai thodi */
+    background-color: white;
+}
+
+/* icon ko color de rhe hain thoda */
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+/* thoda naabar ke button ko darkl  kr rhe hain */
+.nav-link{
+    color: #222 !important;
+    /* inportant use kiya kyunki ispei bootstrap nei already cdss lga rkhi hai use override krne ke liye */
+}
+
+/* footer ki styling kr rhe hain */
+.f-info-links a{
+    text-decoration: none;
+    color: #222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+    /* hover krne pei underline de rhe hai bss */
+}
+
+.f-info-links, .f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.f-info-socials{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.f-info-socials i{
+    margin-right: 1rem;
+}
+
+.f-info{
+    text-align: center;
+    height: 8rem;
+    display: flex;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* card ki stykling kr rhe hain thodi */
+.listing-card{
+    border:none !important;
+}
+
+.card-img-top{
+    border-radius:1rem !important;
+    width: 100% !important;
+}
+.card-body{
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem ; !important;
+}
+.card-text{
+    font-weight: 400 !important;
+}
+.listing-link{
+    /* TAAKI TITLE  OR PRICE SE UNDERLINE HTT SKE */
+    text-decoration: none;
+}
+
+/* overlay effect */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+     background-color: white;
+    opacity: 0.2;
+}
+
+/* new page ki styling */
+.add-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+/* edit styling */
+.btn-edit{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* show styling */
+.show-img{
+    height:300px;
+    width:100%;
+    object-fit:cover;
+    border-radius:10px;
+}
+.btns{
+    display:flex;
+    gap:10px;
+}
+/* map styling */
+#map{
+    width:100%;
+    height:400px;
+    border-radius:10px;
+    margin-bottom:2rem;
+}

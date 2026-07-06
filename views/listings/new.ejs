@@ -1,0 +1,82 @@
+<% layout("layouts/boilerplate.ejs") -%>
+<div class="row">
+    <div class="col-8 offset-2">
+        <br>
+<h3>Create A New Listing</h3>
+<br>
+    <form 
+    method="post" 
+    action="/listings" 
+    novalidate 
+    class="needs-validation"
+     enctype="multipart/form-data"
+     >
+        <!-- <input name="title" placeholder="enter title" type="text"><br>
+         <textarea name="description" placeholder="enter description" type="text"></textarea><br>
+          <input name="image" placeholder="enter URL/link" type="text"><br>
+           <input name="price" placeholder="enter price" type="number"><br>
+            <input name="location" placeholder="enter location" type="text"><br>
+             <input name="country" placeholder="enter country" type="text"><br> -->
+
+             <!-- method 2 -->
+              <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input name="listing[title]" 
+              placeholder="enter a patchy title" 
+              type="text"
+               class="form-control"
+               required
+              />
+              <div class="valid-feedback">Title looks good</div><br>
+              </div>
+              <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea name="listing[description]" placeholder="enter description"
+               type="text" 
+              class="form-control" required></textarea>
+              <div class="invalid-feedback">Please Enter a Short Description</div><br>
+                </div>
+         <!-- <div class="mb-3">
+         <label for="image" class="form-label">Image</label>
+         <input name="listing[image]" placeholder="enter URL/link" type="text" class="form-control"><br>
+         </div>  iski jagah bhai file upload wala system kr diya -->
+           <div class="mb-3">
+         <label for="image" class="form-label">Upload Image</label>
+         <input name="listing[image]" placeholder="enter URL/link" type="file" class="form-control"><br>
+         </div>
+         <!-- abb row and col wali div se price and country ek hi row mwi ajyengi -->
+        <div class="row">
+            
+           <div class="mb-3 col-md-4">
+         <label for="price" class="form-label">Price</label> 
+         <input name="listing[price]" placeholder="Rs.1200"
+          type="" 
+         class="form-control"
+         required
+         >
+         <div class="invalid-feedback">price should be valid</div><br>
+         </div>
+          <div class="mb-3 col-md-8">
+         <label for="country" class="form-label">Country</label>   
+         <input name="listing[country]" placeholder="India" 
+         type="text" class="form-control"
+         required
+         >
+         <div class="invalid-feedback">country name should be valid</div><br>
+         </div>
+         </div>
+
+           <div class="mb-3">
+         <label for="location" class="form-label">Location</label>  
+         <input name="listing[location]" placeholder="Jaipur,Rajasthan"
+          type="text" class="form-control"
+          required
+         >
+         <div class="invalid-feedback">loaction should be valid</div><br>
+         </div>
+          
+             <button class="btn btn-dark add-btn">add new</button>
+             <br><br>
+    </form>
+    </div>
+    </div>

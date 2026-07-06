@@ -1,0 +1,19 @@
+
+<% if(successMsg.length>0){ %>
+    <!-- TAAKI Humesha na dikhe alert wala dibba is liye if condition lagayi hai  -->
+     <div class="alert alert-success alert-dismissible fade show col-6 offset-3 mt-2" role="alert">
+        <!-- yrh dimisibale wali class alert ko dimissiable bna ke l;iye ki hai or iski ke liye button bhi add krna [adega abb] -->
+    <h4><%=successMsg%></h4>
+     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<% if(errorMsg.length>0){ %>
+    <!-- TAAKI Humesha na dikhe alert wala dibba is liye if condition lagayi hai  -->
+     <div class="alert alert-danger alert-dismissible fade show col-6 offset-3 mt-2" role="alert">
+        <!-- yrh dimisibale wali class alert ko dimissiable bna ke l;iye ki hai or iski ke liye button bhi add krna [adega abb] -->
+    <h4><%=errorMsg%></h4>
+     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+

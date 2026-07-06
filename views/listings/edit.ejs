@@ -1,0 +1,52 @@
+<% layout("layouts/boilerplate.ejs") -%>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+                <h2>Edit Your Listing</h2>
+        <!-- <input name="title" placeholder="enter title" type="text"><br>
+         <textarea name="description" placeholder="enter description" type="text"></textarea><br>
+          <input name="image" placeholder="enter URL/link" type="text"><br>
+           <input name="price" placeholder="enter price" type="number"><br>
+            <input name="location" placeholder="enter location" type="text"><br>
+             <input name="country" placeholder="enter country" type="text"><br> -->
+
+             <!-- method 2 -->
+              <form method="POST" action="/listings/<%=listing._id%>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div class="mb-3 mt-3">
+                <label for="title" class="flow-label">Title</label> 
+              <input name="listing[title]" value="<%=listing.title%>" type="text" class="form-control" required>
+               <div class="invalid-feedback">title should be valid</div><br>
+            </div>       
+                <div class="mb-3">
+                <label for="description" class="flow-label">Description</label> 
+             <textarea name="listing[description]" class="form-control" required><%=listing.description%></textarea>
+             <div class="invalid-feedback">please enter a short description</div><br>
+             <div class="mb-3">
+                Original Image<br>
+                <!-- humn kbhi bhi previwe mi original image nhi bhjte thode km pixels wlai bhjte hain kyunki sirf idea hi chaiye hota hai old imga ka uske liye miene controler listing .js mei jaake change kre hain -->
+                <img src="<%=originalImageUrl%>" style="width:30%;" class="img-thumbnail"/>
+             </div>
+              <div class="mb-3">
+              <label for="image" class="flow-label">Upload New Image</label> 
+              <input name="listing[image]" value="<%=listing.image%>" class="form-control" type="file" ><br>
+              </div>  
+              <div class="row">
+                <div class="mb-3 col-md-4">
+              <label for="Price" class="flow-label">Price</label> 
+              <input name="listing[price]" value="<%=listing.price%>" type="number" class="form-control" required>
+              <div class="invalid-feedback">price should be valid</div><br>
+             </div> 
+             <div class="mb-3 col-md-8">
+              <label for="country" class="flow-label">Country</label> 
+              <input name="listing[country]" value="<%=listing.country%>" type="text" class="form-control" required>
+               <div class="invalid-feedback">country name should be valid</div><br>
+                </div>
+              </div>
+              <div class="mb-2">
+              <label for="location" class="flow-label">Location</label> 
+              <input name="listing[location]" value="<%=listing.location%>" type="text" class="form-control" required>
+               <div class="invalid-feedback">location should be valid</div><br>
+             </div>
+              <button class="btn btn-dark btn-edit mb-3">Edit</button>
+             </form>
+</div>
+</div>
