@@ -68,11 +68,18 @@ body{
 /* card ki stykling kr rhe hain thodi */
 .listing-card{
     border:none !important;
+    margin-bottom:2rem;
+    transition:0.3s;
+}
+.listing-card:hover{
+    transform:translateY(-5px);
 }
 
 .card-img-top{
+    width:100% !important;
+    height:20rem;
+    object-fit:cover;
     border-radius:1rem !important;
-    width: 100% !important;
 }
 .card-body{
     padding: 0.5rem 0.5rem 0.5rem 0.5rem ; !important;
@@ -122,4 +129,44 @@ body{
     height:400px;
     border-radius:10px;
     margin-bottom:2rem;
+}
+
+/* =================== MOBILE ==================== */
+
+@media(max-width:768px){
+
+    .navbar{
+        padding:0 1rem;
+    }
+
+    .show-img{
+        height:220px;
+    }
+
+    #map{
+        height:250px;
+    }
+
+    .btns{
+        flex-direction:column;
+        gap:0.7rem;
+    }
+
+    .listing-card{
+        margin-bottom:1.5rem;
+    }
+
+    .card-img-top{
+        height:16rem;
+    }
+
+    .container{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .f-info{
+        height:auto;
+        padding:1rem 0;
+    }
 }

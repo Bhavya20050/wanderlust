@@ -16,14 +16,57 @@
   }
   .search-input{
     border-radius:25px;
-    padding: 0.5rem 3rem 0.5rem 3remn;
+   padding:0.5rem 3rem;
     font-size: 1rem;
   }
+ @media(max-width:768px){
+
+.search-form{
+    flex-direction:column;
+}
+
+.search-input{
+    width:100%;
+    padding:0.5rem 1rem;
+    margin-bottom:10px;
+}
+
+.search-btn{
+    width:100%;
+}
+
+}
+@media(max-width:768px){
+
+.navbar-nav{
+
+text-align:center;
+
+}
+
+.nav-link{
+
+padding:10px 0;
+
+}
+
+}
+@media(max-width:768px){
+
+.navbar-collapse{
+    padding-top:1rem;
+}
+
+.navbar-nav{
+    align-items:center;
+}
+
+}
 </style>
 
 
 
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">  <!--yhaan light likhahai-->
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">  <!--yhaan light likhahai-->
   <div class="container-fluid">
     <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
     <!-- uppr wali line woh airbnb ke symbol wli  -->
@@ -35,9 +78,9 @@
         <a class="nav-link" href="/listings">Explore</a>
          </div>
          <!-- div niche wali for search ui -->
-         <div class="navbar-nav ms-auto">
-            <form class="d-flex" role="search">
-          <input class="form-control me-2 search-input" type="search" placeholder="Search Destination" aria-label="Search"/>
+         <div class="ms-auto my-2 my-lg-0">
+            <form class="d-flex search-form" role="search">
+          <input class="form-control search-input me-2" type="search" placeholder="Search Destination" aria-label="Search"/>
           <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
             </form>
          </div>
