@@ -2,25 +2,30 @@
 .search-btn{
     background:#fe424d;
     color:white;
+    white-space:nowrap;
+    width:auto;
     border-radius:25px;
     padding:.5rem 1rem;
-    border:none;
 }
-
 .search-btn:hover{
     background:#fe424d;
     color:white;
 }
 
+
 .search-input{
-    border-radius:25px;
-    padding:.5rem 1rem;
+    width:320px;
+     border-radius:25px;
+    margin-bottom:0 !important;
 }
 
 .search-form{
-    width:100%;
-    max-width:450px;
+    display:flex;
+    align-items:center;
+    flex-wrap:nowrap;
+    gap:10px;
 }
+
 
 @media(max-width:768px){
 
@@ -55,9 +60,9 @@
 .navbar-nav .nav-link{
     padding:.6rem 0;
 }
-
-.ms-auto{
-    margin-left:0 !important;
+.mx-auto{
+    margin:0 !important;
+    width:100%;
 }
 
 }
