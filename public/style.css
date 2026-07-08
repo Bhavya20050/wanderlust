@@ -10,7 +10,7 @@ body{
 }
 
 .navbar{
-    height: 5rem;
+     min-height:5rem;
     /* navbar hi height bdahiu hai thodi */
     background-color: white;
 }

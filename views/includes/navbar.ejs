@@ -1,33 +1,46 @@
-
 <style>
-  .search-btn{
-    background-color: #fe424d;
-    color: white;
-    border-radius: 25px;
-    padding:0 1rem 0 1rem ;
-  }
-  .search-btn:hover{
-    background-color: #fe424d;
-    color: white;
-  }
-  .search-btn i{
-    display: inline;
-    margin-right: 0.5rem;
-  }
-  .search-input{
+.search-btn{
+    background:#fe424d;
+    color:white;
     border-radius:25px;
-   padding:0.5rem 3rem;
-    font-size: 1rem;
-  }
- @media(max-width:768px){
+    padding:.5rem 1rem;
+    border:none;
+}
+
+.search-btn:hover{
+    background:#fe424d;
+    color:white;
+}
+
+.search-input{
+    border-radius:25px;
+    padding:.5rem 1rem;
+}
 
 .search-form{
+    width:100%;
+    max-width:450px;
+}
+
+@media(max-width:768px){
+
+.navbar{
+    height:auto !important;
+    padding:.5rem 1rem;
+}
+
+.navbar-collapse{
+    padding-top:1rem;
+}
+
+.search-form{
+    display:flex;
     flex-direction:column;
+    width:100%;
 }
 
 .search-input{
     width:100%;
-    padding:0.5rem 1rem;
     margin-bottom:10px;
 }
 
@@ -35,65 +48,85 @@
     width:100%;
 }
 
-}
-@media(max-width:768px){
-
 .navbar-nav{
-
-text-align:center;
-
+    text-align:center;
 }
 
-.nav-link{
-
-padding:10px 0;
-
+.navbar-nav .nav-link{
+    padding:.6rem 0;
 }
 
-}
-@media(max-width:768px){
-
-.navbar-collapse{
-    padding-top:1rem;
-}
-
-.navbar-nav{
-    align-items:center;
+.ms-auto{
+    margin-left:0 !important;
 }
 
 }
 </style>
 
 
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
 
-<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">  <!--yhaan light likhahai-->
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
-    <!-- uppr wali line woh airbnb ke symbol wli  -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link" href="/listings">Explore</a>
-         </div>
-         <!-- div niche wali for search ui -->
-         <div class="ms-auto my-2 my-lg-0">
-            <form class="d-flex search-form" role="search">
-          <input class="form-control search-input me-2" type="search" placeholder="Search Destination" aria-label="Search"/>
-          <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
-            </form>
-         </div>
-       <div class="navbar-nav ms-auto">
-         <a class="nav-link" href="/listings/new">Airbnb your home</a>
-           <% if(!currUser){ %>
-          <!-- means undefined means loggin hi inuser -->
-              <a class="nav-link active" href="/signup"><b>signup</b></a>
-        <a class="nav-link" href="/login"><b>login</b></a>
-       <% }else{%>
-           <a class="nav-link" href="/logout">logout</a>
-       <% }%>
-      </div>
-    </div>
-  </div>
+<div class="container-fluid">
+
+<a class="navbar-brand" href="/listings">
+<i class="fa-regular fa-compass"></i>
+</a>
+
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNavAltMarkup">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+<div class="navbar-nav">
+<a class="nav-link" href="/listings">Explore</a>
+</div>
+
+<div class="mx-auto my-3 my-lg-0">
+
+<form class="search-form d-flex" role="search">
+
+<input
+class="form-control search-input me-lg-2"
+type="search"
+placeholder="Search Destination">
+
+<button class="btn search-btn" type="submit">
+<i class="fa-solid fa-magnifying-glass"></i>
+Search
+</button>
+
+</form>
+
+</div>
+
+<div class="navbar-nav ms-lg-auto">
+
+<a class="nav-link" href="/listings/new">
+Airbnb your home
+</a>
+
+<% if(!currUser){ %>
+
+<a class="nav-link" href="/signup"><b>Signup</b></a>
+
+<a class="nav-link" href="/login"><b>Login</b></a>
+
+<% } else { %>
+
+<a class="nav-link" href="/logout">Logout</a>
+
+<% } %>
+
+</div>
+
+</div>
+
+</div>
+
 </nav>
